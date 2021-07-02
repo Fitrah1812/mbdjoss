@@ -15,12 +15,9 @@ class HasilTelaahSeeder extends Seeder
      */
     public function run()
     {
-
-
         for ($i = 5; $i <= 1000000; $i++) {
             $faker = Factory::create('id_ID');
             $rand_id = rand(1, 1000000);
-
             DB::table('hasil_telaah')->insert([
                 "ht_id" => $i,
                 "pr_id" => $rand_id,

@@ -15,13 +15,12 @@ class ProtokolPenelitiSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 100001; $i <= 1000000; $i++) {
+        for ($i = 1; $i <= 1000000; $i++) {
             $faker = Factory::create('id_ID');
-
             DB::table('protokol_peneliti')->insert([
                 "pr_id" => rand(1, 1000000),
                 "p_id" => rand(1, 1000000),
-                "prp_role" => $faker->randomElement(['KETUA', ''])
+                "prp_role" => $faker->randomElement(['KETUA', 'ANGGOTA', ''])
             ]);
         }
     }

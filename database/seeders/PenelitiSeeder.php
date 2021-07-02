@@ -15,11 +15,11 @@ class PenelitiSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 22; $i <= 1000000; $i++) {
+        for ($i = 1; $i <= 1000000; $i++) {
             $faker = Factory::create('id_ID');
-
             DB::table('peneliti')->insert([
                 "p_id" => $i,
+                "pu_id" => $i,
                 "p_nama" => $faker->name(),
                 "p_instansi" => $faker->company,
                 "p_email" => $faker->safeEmail,
